@@ -1,0 +1,14 @@
+VIDEO DE PORTADA - LEVEL THREE
+
+Copia tu video promocional en esta carpeta y ponle exactamente este nombre:
+portada-barberia.mp4
+
+Recomendaciones:
+- Formato MP4 (H.264), resolución 1920x1080 o 1280x720.
+- Duración ideal: 10 a 20 segundos, en bucle y sin audio (la web lo reproduce silenciado).
+- Usa tomas propias del local, herramientas, degradados y detalles de los cortes.
+- Mantén el archivo optimizado (idealmente menos de 15 MB) para que cargue rápido.
+
+La portada ya tiene un fondo oscuro y una capa de contraste; si el video no está todavía,
+se verá el fondo de respaldo. Puedes añadir una imagen fija llamada portada-poster.jpg
+en esta misma carpeta para usarla como imagen de respaldo mientras carga el video.

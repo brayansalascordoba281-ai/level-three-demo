@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Level Three Barbería · Reservas</title>
+<meta name="theme-color" content="#090909">
+<meta name="description" content="Reserva tu corte en Level Three Barbería: fade, clásico, barba, videojuegos y cerveza fría.">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="/css/premium.css">
+</head>
+<body>
+<header class="top">
+<a class="brand" href="/" aria-label="Level Three Barbería"><svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><text transform="translate(34,54) scale(-1,1)" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="68" font-weight="700" fill="currentColor">K</text></svg><span><b>LEVEL THREE</b><small>BARBERÍA</small></span></a>
+<button class="pill" data-go="reservar">Reservar</button>
+</header>
+<nav id="nav">
+<button data-t="inicio" class="on"><i>🏠</i>Inicio</button>
+<button data-t="reservar"><i>📅</i>Reservar</button>
+<button data-t="galeria"><i>✂️</i>Cortes</button>
+<button data-t="local"><i>🎮</i>Local</button>
+<button data-t="mis"><i>🧾</i>Mis citas</button>
+</nav>
+<main>
+<section id="inicio" class="on">
+<div class="hero hero-video">
+  <video class="hero-media" id="heroVideo" autoplay muted loop playsinline preload="metadata" poster="/media/portada-poster.jpg" aria-label="Video de ambiente de Level Three Barbería">
+    <source id="heroVideoSource" src="/media/portada-barberia.mp4" type="video/mp4">
+  </video>
+  <div class="hero-shade"></div>
+  <div class="hero-content">
+    <span class="eyebrow"><i></i> LEVEL THREE · BARBER EXPERIENCE</span>
+    <div class="hero-kicker" id="heroKicker">TU ESTILO. TU ACTITUD.</div>
+    <div class="hl" id="hl" aria-label="Cortes de otro nivel"></div>
+    <p class="sub" id="heroSubtitle">Más que un corte: una experiencia hecha para destacar. Elige tu estilo y reserva tu momento.</p>
+    <div class="hero-cta"><button class="cta" data-go="reservar">Reservar mi cita <span>↗</span></button><button class="ghost" data-go="galeria">Explorar estilos</button></div>
+    <div class="hero-foot"><span><b>01</b> CORTE PREMIUM</span><span><b>02</b> ATENCIÓN A TU NIVEL</span><span><b>03</b> RESERVA ONLINE</span></div>
+  </div>
+  <div class="hero-scroll">SCROLL PARA DESCUBRIR <span>↓</span></div>
+</div>
+<div class="mq"><div class="mqt" id="mq"></div></div>
+<div class="section-heading"><div><span class="eyebrow">DESCUBRE LEVEL THREE</span><h2 id="mainTitle">Todo a otro nivel.</h2></div><p id="mainText">Tu próxima experiencia comienza aquí.</p></div><div class="tiles" id="tiles"></div>
+<div class="section-heading"><div><span class="eyebrow">INSPÍRATE</span><h2>Encuentra tu próximo look.</h2></div><p>Detalles limpios. Acabados precisos.</p></div><div class="slide" id="slide"></div>
+</section>
+
+<section id="reservar">
+<div id="err" class="msg bad" hidden></div>
+<div class="steps" id="steps" data-n="1"><i></i><i></i><i></i></div><div class="stepl" id="stepl">Paso 1 de 3 · Servicio</div>
+<div class="step on" data-s="1">
+<h2>¿Qué te hacemos hoy?</h2><div class="grid" id="svc"></div>
+<h2>Extras <span class="mu">(opcional)</span></h2><div class="grid" id="ext"></div>
+</div>
+<div class="step" data-s="2">
+<h2>Tu barbero</h2><div class="bcards" id="brb"></div>
+<h2>Elige el día</h2><div class="chips" id="days"></div>
+<h2>Elige la hora</h2><div id="times"><span class="mu">Primero elige un día.</span></div>
+</div>
+<div class="step" data-s="3">
+<h2>Casi listo</h2>
+<div class="sumc" id="sum"></div>
+<div class="account-booking-note" id="bookingIdentity">Reserva asociada a tu cuenta.</div>
+<input id="nt" placeholder="¿Algún detalle o referencia del corte? (opcional)" maxlength="120">
+</div>
+<div id="done" hidden></div>
+<div class="dock" id="dock"><div class="tot"><small>Total</small><b id="dk">$0</b></div><button class="ghost" id="back" style="visibility:hidden">Atrás</button><button class="cta" id="next">Continuar</button></div>
+</section>
+
+<section id="precios"><h2>Servicios y precios</h2><div id="plist"></div><p class="mu">Precios en pesos colombianos.</p></section>
+
+<section id="galeria"><h2>Nuestros cortes</h2><p class="mu">Toca un estilo y lo pasamos a tu reserva.</p><div class="gal" id="glist"></div></section>
+
+<section id="promos"><h2>Promociones</h2><div id="plst"></div><p class="mu">Menciona la promo al llegar al local.</p></section>
+
+<section id="local">
+<h2>Sala de espera</h2><div class="gal" id="environmentMedia"></div>
+<div class="card" style="cursor:default"><b>🎮 Videojuegos</b><span>Mientras esperas tu turno, juega en nuestra sala con consolas y videojuegos.</span></div>
+<h2>Cervezas y bebidas</h2>
+<div class="beers" id="bev"></div>
+<p class="mu">Pregunta en el local por precios y otras opciones.</p>
+<h2>Horario y contacto</h2><div id="info"></div>
+</section>
+
+<section id="resenas"><h2>Lo que dicen nuestros clientes</h2><div id="rsum"></div>
+<h2>Deja tu reseña</h2><input id="rnm" placeholder="Tu nombre" maxlength="40"><div class="chips" id="rst" style="margin-bottom:8px"></div><input id="rtx" placeholder="Cuéntanos tu experiencia" maxlength="200"><button class="cta" id="rgo">Publicar reseña</button><p class="mu" id="rmsg"></p><div id="rlist"></div></section>
+
+<section id="mis"><h2>Mi cuenta Level Three</h2>
+<div id="accountGate" class="account-card"><p class="mu">Regístrate o inicia sesión para consultar tus reservas, promociones y cortes realizados desde cualquier dispositivo.</p>
+<div class="account-tabs"><button class="chip sel" id="showLogin">Iniciar sesión</button><button class="chip" id="showRegister">Crear cuenta</button></div>
+<div id="loginForm"><input id="loginPhone" placeholder="Tu celular" inputmode="tel" autocomplete="tel"><input id="loginPass" type="password" placeholder="Contraseña" autocomplete="current-password"><button class="cta" id="loginBtn">Entrar a mi cuenta</button></div>
+<div id="registerForm" hidden><input id="regName" placeholder="Nombre completo" autocomplete="name"><input id="regPhone" placeholder="Celular" inputmode="tel" autocomplete="tel"><input id="regPass" type="password" placeholder="Crea una contraseña (mínimo 8 caracteres)" autocomplete="new-password"><button class="cta" id="registerBtn">Crear mi cuenta</button></div><p id="accountMsg" class="mu" aria-live="polite"></p></div>
+<div id="customerPanel" hidden><div class="row"><div><b id="customerName"></b><small id="customerPhone"></small></div><button class="x" id="logoutBtn">Salir</button></div>
+<h2>Mis reservas y cortes</h2><div id="loy"></div><div id="mine"></div>
+<h2>Promociones para ti</h2><div id="customerPromos"></div></div></section>
+</main>
+<div class="toast" id="toast" role="status"></div>
+<script src="/js/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "level-three-barberia",
+  "version": "1.0.0",
+  "description": "Plataforma de reservas Level Three Barbería (servidor + base de datos SQLite + web de clientes + panel admin)",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning server.js",
+    "dev": "node --disable-warning=ExperimentalWarning --watch server.js",
+    "test": "node --disable-warning=ExperimentalWarning test.js"
+  },
+  "engines": { "node": ">=22.13" }
+}
